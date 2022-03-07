@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 ///*************** ThemeType ***************
-enum ThemeType {Red }
+enum ThemeType {ligt,dart }
 
 /// Headline Text Documentation
 // Extremely large text.
@@ -106,7 +106,7 @@ ThemeData darkTheme = ThemeData.dark().copyWith(
 ///*************** lightTheme ***************
 ThemeData lightTheme = ThemeData.light().copyWith(
 // Sets the dark theme, this will set the auto colors accordingly
-  brightness: Brightness.light,
+  brightness: Brightness.dark,
   primaryColor: Color(0xFF2C2C1F),
   accentColor: Color(0xFF697331),
   hintColor: Colors.grey,

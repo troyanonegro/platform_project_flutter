@@ -1,4 +1,4 @@
-import 'dart:async';
+/*import 'dart:async';
 import 'dart:io';
 import 'package:path/path.dart';
 import 'package:platform_project/models/catalog_model.dart';
@@ -128,3 +128,4 @@ class DatabaseHelper {
     return dbClient.close();
   }
 }
+*/

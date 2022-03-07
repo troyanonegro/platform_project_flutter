@@ -12,7 +12,7 @@ class SimpleBlocObserver extends BlocObserver {
     super.onEvent(bloc, event);
 
     /// just to watch what is happening
-    debugPrint("##BLOC: Bloc this is the Event -> $event");
+    debugPrint("##BLOC: Blocs this is the Event -> $event");
   }
 
   @override
@@ -22,7 +22,7 @@ class SimpleBlocObserver extends BlocObserver {
     super.onTransition(bloc, transition);
 
     /// just to watch what is happening
-    debugPrint("##BLOC: Bloc this is the Transition -> $transition");
+    debugPrint("##BLOC: Blocs this is the Transition -> $transition");
   }
 
   @override
@@ -32,6 +32,6 @@ class SimpleBlocObserver extends BlocObserver {
     super.onError(bloc, error, stacktrace);
 
     /// just to watch what is happening
-    debugPrint("##BLOC: Bloc this is the Error -> $error");
+    debugPrint("##BLOC: Blocs this is the Error -> $error");
   }
 }

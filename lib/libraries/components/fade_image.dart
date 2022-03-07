@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:platform_project/libraries/widgets.dart';
 
 class CustomFadeImage extends StatelessWidget {
-  const CustomFadeImage({
-    Key? key,
-  }) : super(key: key);
+  final String imageUrl;
+  final double imageHeight;
+  CustomFadeImage({required this.imageUrl, required this.imageHeight});
 
   @override
   Widget build(BuildContext context) {
-    return const FadeInImage(
+    return  FadeInImage(
       placeholder: AssetImage('assets/image/loadingStandar.gif'),
-      image: NetworkImage(
-          'https://cdn-icons-png.flaticon.com/512/2991/2991148.png'),
+      image: NetworkImage(imageUrl),
       width: double.infinity,
-      height: 200,
+      height: imageHeight,
     );
   }
 }

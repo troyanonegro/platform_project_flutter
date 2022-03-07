@@ -6,6 +6,8 @@ class CustomPreferredSize extends PreferredSize {
     key: key,
     preferredSize: const Size.fromHeight(30),
     child: AppBar(
+
+      automaticallyImplyLeading: false,
     ),
   );
 }

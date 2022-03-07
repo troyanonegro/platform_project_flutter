@@ -16,13 +16,13 @@ class FormRegister extends StatelessWidget {
                 autocorrect: false,
                 keyboardType: TextInputType.text,
                 decoration: InputDecorations.FromInputDecoration(
-                    labelText: 'Nombre',
-                    hintText: 'Juan',
+                    labelText: 'Nombre\'s',
+                    hintText: 'Nombre de Usuario',
                     prefixIcon: Icons.supervised_user_circle),
                 validator: (value) {
                   return (value != null && value.length >= 6)
                       ? null
-                      : 'Contraseña debe de 6 caractes';
+                      : 'Nombre debe de 6 o mas caractes';
                 }),
 
           const SizedBox(height: 15),
@@ -30,13 +30,13 @@ class FormRegister extends StatelessWidget {
                 autocorrect: false,
                 keyboardType: TextInputType.text,
                 decoration: InputDecorations.FromInputDecoration(
-                    labelText: 'Apellido',
-                    hintText: 'Juan',
+                    labelText: 'Apellidos\'s',
+                    hintText: 'Apellido de Usuario',
                     prefixIcon: Icons.supervised_user_circle),
                 validator: (value) {
                   return (value != null && value.length >= 6)
                       ? null
-                      : 'Contraseña debe de 6 caractes';
+                      : 'Apellidos debe de 6 o mas caractes';
                 }),
             const SizedBox(height: 15),
             TextFormField(
@@ -60,7 +60,7 @@ class FormRegister extends StatelessWidget {
               keyboardType: TextInputType.visiblePassword,
               decoration: InputDecorations.FromInputDecoration(
                   labelText: 'Contraseña',
-                  hintText: '*********',
+                  hintText: 'Ingresa tu contraseña',
                   prefixIcon: Icons.lock_clock_outlined),
             ),
             const SizedBox(height: 15),
@@ -69,8 +69,14 @@ class FormRegister extends StatelessWidget {
               keyboardType: TextInputType.visiblePassword,
               decoration: InputDecorations.FromInputDecoration(
                   labelText: 'Confirmar Contraseña',
-                  hintText: '*********',
+                  hintText: 'Ingresa tu contraseña',
                   prefixIcon: Icons.lock_clock_outlined),
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              validator: (value) {
+                return (value != null && value.length >= 6)
+                    ? null
+                    : 'Contraseña debe de 6 caractes';
+              },
             )
           ],
         ),

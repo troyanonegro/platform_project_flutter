@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platform_project/libraries/widgets.dart';
-import 'package:platform_project/services/helpers/apibase_helper.dart';
+
 
 class CompleteRegistration extends StatelessWidget {
   const CompleteRegistration({Key? key}) : super(key: key);
@@ -25,7 +24,7 @@ class CompleteRegistration extends StatelessWidget {
             Container(
               alignment: Alignment.topLeft,
               child: IconButton(
-                icon: const Icon(Icons.keyboard_return),
+                icon: const Icon(Icons.keyboard_backspace_outlined),
                 color: Colors.white,
                 onPressed: () {},
               ),
@@ -35,50 +34,24 @@ class CompleteRegistration extends StatelessWidget {
               height: 680,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children:const [
                   Text('GRACIAS!',
                       style: TextStyle(fontSize: 50, color: Colors.white)),
                   Text('Haz quedado regitrado en GoGoGo',
                       style: TextStyle(fontSize: 20, color: Colors.white)),
                   SizedBox(height: 20),
-                  Text('Te enviamos un correo para que confirmes tu registro',
-                      style: TextStyle(fontSize: 20, color: Colors.white,),textAlign:TextAlign.center,),
-                  SizedBox(height: 100),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      MaterialButton(
-                        shape: RoundedRectangleBorder(),
-                        disabledColor: Colors.red,
-                        color: const Color.fromARGB(255, 255, 134, 127),
-                        elevation: 0,
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: const Text('Terminos y Condiciones'),
-                        ),
-                        onPressed: () {},
-                      ),
-                      MaterialButton(
-                        shape: RoundedRectangleBorder(),
-                        disabledColor: Colors.red,
-                        color: const Color.fromARGB(255, 255, 134, 127),
-                        elevation: 0,
-                        child: Container(
-                          //margin: const EdgeInsets.all(20),
-                          padding: const EdgeInsets.symmetric(),
-                          alignment: Alignment.center,
-                          child: const Text('Iniciar Seccion'),
-                        ),
-                        onPressed: () {},
-                      ),
-                    ],
+                  Text(
+                    'Te enviamos un correo para que confirmes tu registro',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
+                  SizedBox(height: 100),
+
                 ],
               ),
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(),
             ),
           ],
         ),
